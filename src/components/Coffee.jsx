@@ -7,14 +7,26 @@ function Coffee() {
     fetch(`https://api.sampleapis.com/coffee/${temperature}`)
       .then((results) => results.json())
       .then((data) => setCoffeeList(data))
-      .catch((err) => alert(err))
+      .catch((err) => alert(err));
     //`https://api.sampleapis.com/coffee/${temperature}`
     //results dump into setCoffeList
   }
+
+ // const getCoffeeSync = async (temperature) => {
+   // try {
+
+//const result = await fetch(`https://api.sampleapis.com/coffee/${temperature}`);
+//const data = await result.json();
+//setCoffeeList(data);
+ // }
+  //catch(err){
+   // alert(err);
+ // }
+ // }
   return (
     <>
-      <button onClick={() => getCoffee("hot")}>HOT</button>
-      <button onClick={() => getCoffee("iced")}>ICED</button>
+      <button onClick={() => getCoffee("hot")}>HOT</button> //add sync to getCoffeeSync
+      <button onClick={() => getCoffee("iced")}>ICED</button> //add sync to getCoffeeSync
 
       <section>
         <h2>Coffee List</h2>
